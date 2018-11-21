@@ -1,0 +1,94 @@
+<!-- Main theme CSS included on every template -->
+
+{{ 'timber.scss.liquid' | asset_url | stylesheet_tag }}
+{{ 'theme.scss.liquid' | asset_url | stylesheet_tag }}
+
+<!-- Template CSS included only on corresponding template -->
+
+{% case template.name %}
+
+  {% when 'checkout' %}
+
+    {{ 'checkout.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'product'
+
+    {{ 'product.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'search' %}
+
+    {{ 'search.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'list-collections' %}
+
+    {{ 'list-collections.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'blog' %}
+
+    {{ 'blog.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-login' %}
+
+    {{ 'customers-login.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'cart' %}
+
+    {{ 'cart.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'article' %}
+
+    {{ 'article.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-account' %}
+
+    {{ 'customers-account.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'index' %}
+
+    {{ 'index.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-activate_account' %}
+
+    {{ 'customers-activate_account.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-order' %}
+
+    {{ 'customers-order.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'page' %}
+
+    {{ 'page.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-register' %}
+
+    {{ 'customers-register.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-addresses' %}
+
+    {{ 'customers-addresses.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'collection' %}
+
+    {{ 'collection.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when '404' %}
+
+    {{ '404.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-reset_password' %}
+
+    {{ 'customers-reset_password.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'password' %}
+
+    {{ 'password.scss.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'gift_card' %}
+
+    {{ 'gift_card.scss.liquid' | asset_url | stylesheet_tag }}
+
+{% endcase %}
+
+<!-- Add custom templates here -->
+
+<!-- Add shared/cross template component CSS here -->
