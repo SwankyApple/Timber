@@ -1,0 +1,104 @@
+<!-- Main theme JS included on every template -->
+
+{{ 'timber.js' | asset_url | script_tag }}
+{{ 'theme.js' | asset_url | script_tag }}
+
+<!-- Template JS included only on corresponding template -->
+
+/**
+ * If a template requires JavaScript then a separate file should be created for
+ * it and be included below.
+ */
+
+
+{% case template.name %}
+
+  {% comment %}
+
+  {% when 'checkout' %}
+
+    {{ 'checkout.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'product'
+
+    {{ 'product.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'search' %}
+
+    {{ 'search.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'list-collections' %}
+
+    {{ 'list-collections.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'blog' %}
+
+    {{ 'blog.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-login' %}
+
+    {{ 'customers-login.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'cart' %}
+
+    {{ 'cart.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'article' %}
+
+    {{ 'article.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-account' %}
+
+    {{ 'customers-account.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'index' %}
+
+    {{ 'index.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-activate_account' %}
+
+    {{ 'customers-activate_account.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-order' %}
+
+    {{ 'customers-order.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'page' %}
+
+    {{ 'page.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-register' %}
+
+    {{ 'customers-register.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-addresses' %}
+
+    {{ 'customers-addresses.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'collection' %}
+
+    {{ 'collection.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when '404' %}
+
+    {{ '404.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'customers-reset_password' %}
+
+    {{ 'customers-reset_password.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'password' %}
+
+    {{ 'password.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% when 'gift_card' %}
+
+    {{ 'gift_card.js.liquid' | asset_url | stylesheet_tag }}
+
+  {% endcomment %}
+
+{% endcase %}
+
+<!-- Add custom templates here -->
+
+<!-- Add shared/cross template component CSS here -->

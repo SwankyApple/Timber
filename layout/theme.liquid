@@ -28,7 +28,7 @@
   <meta name="theme-color" content="{{ settings.color_primary }}">
 
   <!-- CSS ================================================== -->
-  {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+  {% include 'theme-css.lquid' %}
 
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
@@ -393,7 +393,9 @@
   </div>
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
-  {{ 'timber.js' | asset_url | script_tag }}
+
+  <!-- JS ================================================== -->
+  {% include 'theme-js.lquid' %}
 
   {% comment %}
     Template-specific js
